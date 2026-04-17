@@ -51,9 +51,9 @@
     "plan": "vip",
     "traffic_limit_gb": 100
   },
-   "TESTMMA2": {
+   "TESTMMA3": {
     "status": "active",
-    "plan": "red",
+    "plan": "RED",
     "traffic_limit_gb": 0
   }
 }
