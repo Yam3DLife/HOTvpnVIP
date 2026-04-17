@@ -1,1 +1,1 @@
-# HOTvpnVIP
+# vpn-subscriptions
