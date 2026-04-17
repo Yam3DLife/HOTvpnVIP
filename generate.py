@@ -48,7 +48,7 @@ TARIFFS = {
         "default_traffic_gb": 0
     },
     "RED": {
-        "keys_file": "keys/RED.txt",
+        "keys_file": "keys/vip.txt",
         "display_name": "hotRED 🔴",
         "description": "🔥 Сезонный тариф. Недорого. Полный безлимит на месяц",
         "default_days": 30,
