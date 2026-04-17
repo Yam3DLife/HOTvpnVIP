@@ -33,15 +33,6 @@ jobs:
         run: |
           mkdir -p configs vless-links subs
       
-      - name: List files for debugging
-        run: |
-          echo "=== Current directory ==="
-          ls -la
-          echo "=== configs directory ==="
-          ls -la configs/ || echo "configs/ is empty or missing"
-          echo "=== vless-links directory ==="
-          ls -la vless-links/ || echo "vless-links/ is empty or missing"
-      
       - name: Run generation script
         run: python generate.py
       
@@ -49,6 +40,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           git add subs/*.txt 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
