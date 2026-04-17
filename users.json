@@ -1,19 +1,49 @@
 {
-  "trial_user_1": {
+  "user_trial": {
     "status": "active",
     "plan": "trial",
-    "expire_date": "2026-04-20"
+    "expire_date": "2026-04-20",
+    "traffic_limit_gb": 5
   },
-  "vip_user_1": {
-    "status": "active",
-    "plan": "vip",
-    "expire_date": "2026-05-15",
-    "traffic_limit_gb": 0
-  },
-  "lite_user_1": {
+  "user_lite": {
     "status": "active",
     "plan": "lite",
-    "expire_date": "2026-04-25",
+    "expire_date": "2026-05-15",
+    "traffic_limit_gb": 50
+  },
+  "user_vip": {
+    "status": "active",
+    "plan": "vip",
+    "expire_date": "2026-06-01",
+    "traffic_limit_gb": 0
+  },
+  "user_ultra": {
+    "status": "active",
+    "plan": "ultra",
+    "expire_date": "2026-07-01",
+    "traffic_limit_gb": 0
+  },
+  "user_family": {
+    "status": "active",
+    "plan": "family",
+    "expire_date": "2026-05-20",
+    "traffic_limit_gb": 200
+  },
+  "user_premium": {
+    "status": "active",
+    "plan": "premium",
+    "expire_date": "2026-07-15",
+    "traffic_limit_gb": 0
+  },
+  "user_without_date": {
+    "status": "active",
+    "plan": "vip",
+    "traffic_limit_gb": 100
+  },
+  "user_blocked": {
+    "status": "blocked",
+    "plan": "vip",
+    "expire_date": "2026-04-01",
     "traffic_limit_gb": 50
   }
 }
