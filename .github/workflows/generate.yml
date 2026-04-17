@@ -2,10 +2,12 @@ name: Generate User Subscriptions
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
     paths:
       - 'users.json'
       - 'generate.py'
+      - 'configs/**'
+      - 'vless-links/**'
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
@@ -27,6 +29,15 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: List files for debugging
+        run: |
+          echo "=== Current directory structure ==="
+          ls -la
+          echo "=== Checking configs directory ==="
+          ls -la configs/ || echo "configs directory not found"
+          echo "=== Checking vless-links directory ==="
+          ls -la vless-links/ || echo "vless-links directory not found"
+      
       - name: Run generation script
         run: python generate.py
       
@@ -34,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add subs/*.txt 2>/dev/null || true
+          git add subs/*.txt subs/*.json 2>/dev/null || true
           git status
           if git diff --cached --quiet; then
             echo "No changes to commit"
