@@ -38,7 +38,8 @@
   "user_without_date": {
     "status": "active",
     "plan": "vip",
-    "traffic_limit_gb": 100
+    "traffic_limit_gb": 100,
+    "expire_date": "2026-05-17"
   },
   "user_blocked": {
     "status": "blocked",
@@ -46,12 +47,13 @@
     "expire_date": "2026-04-01",
     "traffic_limit_gb": 50
   },
-   "TESTMMA": {
+  "TESTMMA": {
     "status": "active",
     "plan": "vip",
-    "traffic_limit_gb": 100
+    "traffic_limit_gb": 100,
+    "expire_date": "2026-05-17"
   },
-   "TESTMMA5": {
+  "TESTMMA5": {
     "status": "active",
     "plan": "RED",
     "expire_date": "2026-05-01",
