@@ -58,5 +58,11 @@
     "plan": "RED",
     "expire_date": "2026-05-01",
     "traffic_limit_gb": 0
+  },
+  "MatveyRED": {
+    "status": "active",
+    "plan": "RED",
+    "expire_date": "2026-05-01",
+    "traffic_limit_gb": 0
   }
 }
