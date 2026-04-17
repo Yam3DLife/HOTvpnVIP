@@ -51,9 +51,10 @@
     "plan": "vip",
     "traffic_limit_gb": 100
   },
-   "TESTMMA3": {
+   "TESTMMA5": {
     "status": "active",
     "plan": "RED",
+    "expire_date": "2026-05-01",
     "traffic_limit_gb": 0
   }
 }
