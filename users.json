@@ -9,13 +9,13 @@
     "status": "active",
     "plan": "lite",
     "expire_date": "2026-05-15",
-    "traffic_limit_gb": 50
+    "traffic_limit_gb": 30
   },
   "user_vip": {
     "status": "active",
     "plan": "vip",
     "expire_date": "2026-06-01",
-    "traffic_limit_gb": 0
+    "traffic_limit_gb": 50
   },
   "user_ultra": {
     "status": "active",
@@ -27,13 +27,13 @@
     "status": "active",
     "plan": "family",
     "expire_date": "2026-05-20",
-    "traffic_limit_gb": 200
+    "traffic_limit_gb": 150
   },
   "user_premium": {
     "status": "active",
     "plan": "premium",
     "expire_date": "2026-07-15",
-    "traffic_limit_gb": 0
+    "traffic_limit_gb": 1000
   },
   "user_without_date": {
     "status": "active",
@@ -82,5 +82,11 @@
     "plan": "Green",
     "expire_date": "2026-05-19",
     "traffic_limit_gb": 1000
+  },
+  "userSuper1": {
+    "status": "active",
+    "plan": "Green",
+    "expire_date": "2026-05-19",
+    "traffic_limit_gb": 0
   }
 }
