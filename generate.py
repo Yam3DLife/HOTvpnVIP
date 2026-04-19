@@ -60,6 +60,13 @@ TARIFFS = {
         "description": "🔥 Будь всегда на связи и по выгодной цене. Полный безлимит месяц",
         "default_days": 30,
         "default_traffic_gb": 0
+    },
+    "Super": {
+        "keys_file": "keys/vip.txt",
+        "display_name": "Super 🟢",
+        "description": "🔥 Будь всегда на связи. Полный безлимит месяц",
+        "default_days": 30,
+        "default_traffic_gb": 0
     }
 }
 # ============================================================
