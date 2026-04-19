@@ -60,9 +60,9 @@
     "traffic_limit_gb": 0
   },
   "MatveyRED": {
-    "status": "active",
+    "status": "blocked",
     "plan": "RED",
-    "expire_date": "2026-05-01",
-    "traffic_limit_gb": 0
+    "expire_date": "2026-04-18",
+    "traffic_limit_gb": 0,1
   }
 }
