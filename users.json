@@ -63,6 +63,6 @@
     "status": "blocked",
     "plan": "RED",
     "expire_date": "2026-04-18",
-    "traffic_limit_gb": 0,1
+    "traffic_limit_gb": 1
   }
 }
