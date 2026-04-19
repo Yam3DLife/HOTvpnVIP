@@ -84,13 +84,13 @@ def load_keys(tariff):
         return f.read().strip()
 
 def build_subscription(keys, expire_timestamp, total_bytes, display_name, description):
-    """Собирает подписку в base64"""
+    """Собирает подписку в base64 с использованием официального параметра #announce"""
     headers = f"""#profile-title: HotVPN {display_name}
 #profile-update-interval: 5
 #support-url: https://t.me/Wd_Life
 #subscription-userinfo: upload=0; download=0; total={total_bytes}; expire={expire_timestamp}
 #sub-expire: true
-#sub-info-text: {description}
+#announce: {description}
 
 """
     combined = headers + keys
