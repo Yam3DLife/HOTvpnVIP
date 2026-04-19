@@ -7,56 +7,56 @@ from datetime import datetime, timedelta
 TARIFFS = {
     "trial": {
         "keys_file": "keys/trial.txt",
-        "display_name": "HotTRIAL 🔥",
+        "display_name": "TRIAL 🔥",
         "description": "🔥 Пробный доступ на 3 дня\n📊 5 ГБ трафика\n⚡ Скорость до 50 Мбит/с",
         "default_days": 3,
         "default_traffic_gb": 5
     },
     "lite": {
         "keys_file": "keys/lite.txt",
-        "display_name": "HotLITE ⚡",
+        "display_name": "LITE ⚡",
         "description": "🔥 Самый доступный и недорогой 30 гб/мес",
         "default_days": 30,
         "default_traffic_gb": 30
     },
     "vip": {
         "keys_file": "keys/vip.txt",
-        "display_name": "HotVIP 👑",
+        "display_name": "VIP 👑",
         "description": "🔥 надёжный и продвинутый 50 гб/мес",
         "default_days": 30,
         "default_traffic_gb": 50
     },
     "ultra": {
-        "keys_file": "keys/ultra.txt",
-        "display_name": "ULTRAhot 🚀",
+        "keys_file": "keys/vip.txt",
+        "display_name": "ULTRA 🚀",
         "description": "🔥 полный безлимит на месяц",
         "default_days": 30,
         "default_traffic_gb": 0
     },
     "family": {
-        "keys_file": "keys/family.txt",
-        "display_name": "FAMILYhot 👨‍👩‍👧‍👦",
+        "keys_file": "keys/vip.txt",
+        "display_name": "FAMILY 👨‍👩‍👧‍👦",
         "description": "🔥 На всю семью. Недорого. И всегда с интернетом",
         "default_days": 30,
         "default_traffic_gb": 200
     },
     "premium": {
-        "keys_file": "keys/premium.txt",
-        "display_name": "PREMIUM Hot 💎",
+        "keys_file": "keys/vip.txt",
+        "display_name": "PREMIUM 💎",
         "description": "🔥 Премиум доступ на 60 дней\n♾️ Безлимитный трафик",
         "default_days": 60,
         "default_traffic_gb": 0
     },
     "RED": {
         "keys_file": "keys/vip.txt",
-        "display_name": "hotRED 🔴",
+        "display_name": "RED 🔴",
         "description": "🔥 Сезонный тариф. Недорого. Полный безлимит на месяц",
         "default_days": 30,
         "default_traffic_gb": 0
     },
     "Green": {
-        "keys_file": "keys/Green.txt",
-        "display_name": "hotGREEN 🟢",
+        "keys_file": "keys/vip.txt",
+        "display_name": "GREEN 🟢",
         "description": "🔥 Будь всегда на связи и по выгодной цене. Полный безлимит месяц",
         "default_days": 30,
         "default_traffic_gb": 0
