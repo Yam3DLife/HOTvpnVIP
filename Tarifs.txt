@@ -6,3 +6,4 @@ ultra
 vip
 lite
 trial
+Super
