@@ -1,0 +1,8 @@
+Green
+RED
+premium
+family
+ultra
+vip
+lite
+trial
