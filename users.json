@@ -64,5 +64,23 @@
     "plan": "RED",
     "expire_date": "2026-04-18",
     "traffic_limit_gb": 1
+  },
+  "userRED1": {
+    "status": "active",
+    "plan": "RED",
+    "expire_date": "2026-05-19",
+    "traffic_limit_gb": 0
+  },
+  "userULTRA1": {
+    "status": "active",
+    "plan": "ultra",
+    "expire_date": "2026-05-19",
+    "traffic_limit_gb": 100
+  },
+  "userGreen1": {
+    "status": "active",
+    "plan": "Green",
+    "expire_date": "2026-05-19",
+    "traffic_limit_gb": 1000
   }
 }
