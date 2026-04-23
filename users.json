@@ -88,5 +88,11 @@
     "plan": "Green",
     "expire_date": "2026-05-19",
     "traffic_limit_gb": 0
+  },
+  "userAleksandr": {
+    "status": "active",
+    "plan": "RED",
+    "expire_date": "2028-05-19",
+    "traffic_limit_gb": 0
   }
 }
