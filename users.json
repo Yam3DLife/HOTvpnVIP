@@ -106,5 +106,11 @@
     "plan": "json_RED",
     "expire_date": "2026-06-06",
     "traffic_limit_gb": 0
-  }
+  },
+  "test_json_user": {
+  "status": "active",
+  "plan": "json_test",
+  "expire_date": "2026-06-06",
+  "traffic_limit_gb": 0
+}
 }
