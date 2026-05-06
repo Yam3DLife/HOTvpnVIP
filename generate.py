@@ -78,13 +78,13 @@ TARIFFS = {
         "is_json": False
     },
     # ===== НОВЫЙ JSON-ТАРИФ =====
-    "json_advanced": {
+    "json_RED": {
         "keys_file": "configs/advanced.json",
-        "display_name": "JSON ADVANCED 🛠️",
-        "description": "Продвинутая JSON-конфигурация",
+        "display_name": "REDsUmmer 🔴☀️",
+        "description": "🔥 Летний безлимит\n♾️ Полный безлимит трафика\n🌍 Серверы: Лондон + Обход\n⚡ Скорость до 1 Гбит/с",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": True  # <-- Это флаг, указывающий, что это JSON-подписка
+        "is_json": True
     }
 }
 # ============================================================
