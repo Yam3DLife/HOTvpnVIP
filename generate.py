@@ -77,7 +77,7 @@ TARIFFS = {
         "default_traffic_gb": 0,
         "is_json": False
     },
-    # ===== НОВЫЙ JSON-ТАРИФ =====
+    # ===== НОВЫЙ JSON-ТАРИФ REDsUmmer =====
     "json_RED": {
         "keys_file": "configs/advanced.json",
         "display_name": "REDsUmmer 🔴☀️",
