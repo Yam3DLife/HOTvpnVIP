@@ -1,0 +1,383 @@
+{
+  "dns": {
+    "servers": [
+      "8.8.8.8",
+      "1.1.1.1"
+    ],
+    "queryStrategy": "UseIP"
+  },
+  "routing": {
+    "rules": [
+      {
+        "port": 53,
+        "type": "field",
+        "outboundTag": "Balancer"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:.ru",
+          "domain:.su",
+          "domain:.рф",
+          "domain:appsflyersdk.com",
+          "domain:f6.security",
+          "domain:lencr.org",
+          "domain:tinkoff.ai",
+          "domain:my-manager-account.com",
+          "domain:pyrus.com",
+          "domain:globalsign.com",
+          "domain:taxiaid.org",
+          "domain:driveawaytaxi.org",
+          "domain:cabconnect.org",
+          "domain:kassa.ai",
+          "domain:adjust.com",
+          "domain:app-ads-services.com",
+          "domain:2giskz.app",
+          "domain:selcdn.net",
+          "domain:timeweb.cloud",
+          "domain:gvt2.com",
+          "domain:roistat.com",
+          "domain:msftconnecttest.com",
+          "domain:beget.com",
+          "domain:artfut.com",
+          "domain:ispsystem.net",
+          "domain:adhigh.net",
+          "domain:bumlam.com",
+          "domain:msn.com",
+          "domain:freekassa.net",
+          "domain:hybrid.ai",
+          "domain:skcrtxr.com",
+          "domain:vault-path.tech",
+          "domain:avito.st",
+          "domain:appcenter.ms",
+          "domain:stellarlabs.ai",
+          "domain:megamarket.tech",
+          "domain:buzzoola.com",
+          "domain:cdek.shopping",
+          "domain:radarbase.info",
+          "domain:icanhazip.com",
+          "domain:reqres.in",
+          "domain:typicode.com",
+          "domain:tracking-app.diginetica.net",
+          "domain:rostaxi.org",
+          "domain:mradx.net",
+          "domain:adjust.io",
+          "domain:crashlytics.com",
+          "domain:2gis.com",
+          "domain:neon.click",
+          "domain:ifconfig.me",
+          "domain:www.googletagmanager.com",
+          "domain:whoosh.bike",
+          "domain:my.com",
+          "domain:automacon.net",
+          "domain:lenta.com",
+          "domain:userx.pro",
+          "domain:kaspersky-labs.com",
+          "domain:lenta.tech",
+          "domain:gravityfield.ai",
+          "domain:diginetica.net",
+          "domain:atidevs.com",
+          "domain:trisigma.io",
+          "domain:ip-api.com",
+          "domain:digicert.com",
+          "domain:litres.io",
+          "domain:dodois.com",
+          "domain:dodois.io",
+          "domain:yandex.cloud",
+          "domain:dodopizza.com",
+          "domain:threads.im",
+          "domain:x5static.net",
+          "domain:dbankcloud.com",
+          "domain:fastly-edge.com",
+          "domain:zvooq.com",
+          "domain:zvuk.com",
+          "domain:edna.id",
+          "domain:moengage.com",
+          "domain:dbankcloud.cn",
+          "domain:hicloud.com",
+          "domain:targetads.io",
+          "domain:youla.io",
+          "domain:bidease.com",
+          "domain:sberbank-tele.com",
+          "domain:startappservice.com",
+          "domain:dbo-dengi.online",
+          "domain:group-ib.com",
+          "domain:licard.com",
+          "domain:strmerce.live",
+          "domain:premier.one",
+          "domain:sunlight.net",
+          "domain:uma.media",
+          "domain:admon.pro",
+          "domain:opera.com",
+          "domain:jivosite.com",
+          "domain:ampproject.org",
+          "domain:yandexadexchange.net",
+          "domain:anty-proxy-checker.com",
+          "domain:ruvds.com",
+          "domain:fkwallet.io",
+          "domain:adspower.com",
+          "domain:browserscan.net",
+          "full:optimizationguide-pa.googleapis.com",
+          "full:safebrowsing.google.com",
+          "full:graph.facebook.com",
+          "full:clients3.google.com",
+          "full:google.com",
+          "full:drivefrontend-pa.googleapis.com",
+          "full:firebaselogging-pa.googleapis.com",
+          "full:firebaseappcheck.googleapis.com",
+          "full:www.google-analytics.com",
+          "full:crashlyticsreports-pa.googleapis.com",
+          "full:fcmtoken.googleapis.com",
+          "full:firebaseremoteconfig.googleapis.com",
+          "full:firebaseinstallations.googleapis.com",
+          "full:device-provisioning.googleapis.com",
+          "full:proxy-safebrowsing.googleapis.com",
+          "full:googleads.g.doubleclick.net",
+          "full:signaler-pa.googleapis.com",
+          "full:firebaselogging.googleapis.com",
+          "full:api.sia.samsungdm.com",
+          "full:digitalassetlinks.googleapis.com",
+          "full:www.google.ee",
+          "full:android.clients.google.com",
+          "full:update.googleapis.com",
+          "full:android.apis.google.com",
+          "full:lamssettings-pa.googleapis.com",
+          "full:firebaseremoteconfigrealtime.googleapis.com",
+          "full:content-autofill.googleapis.com",
+          "full:remoteprovisioning.googleapis.com",
+          "full:cryptauthdevicesync.googleapis.com",
+          "full:firebaseinappmessaging.googleapis.com",
+          "full:geomobileservices-pa.googleapis.com",
+          "full:mtalk.google.com",
+          "full:one.one.one.one",
+          "full:googleads.g.doubleclick.net",
+          "full:edge-mqtt-fallback.facebook.com",
+          "full:ssl.gstatic.com",
+          "full:play-fe.googleapis.com",
+          "full:safebrowsing.googleapis.com",
+          "full:consumer.huawei.com",
+          "full:www.googleadservices.com",
+          "full:ep2.facebook.com",
+          "domain:edge.apple",
+          "domain:vigo.tech",
+          "domain:worldota.net",
+          "domain:gid.team",
+          "domain:kaspersky.com",
+          "domain:paywb.com",
+          "domain:yango.tech",
+          "domain:fraudshallnotpass.com",
+          "domain:amplitude.com",
+          "domain:aviasales.com",
+          "domain:avs.io",
+          "domain:appsflyer.com",
+          "domain:app-measurement.com",
+          "domain:ozonusercontent.com",
+          "domain:crashlytics.com",
+          "domain:edna.io",
+          "domain:ipify.org",
+          "domain:livechatinc.com",
+          "domain:coolclever.tech",
+          "domain:app-analytics-services.com",
+          "domain:adjust.world",
+          "domain:apple.com",
+          "domain:userapi.com",
+          "domain:yastatic.net",
+          "domain:yandex.net",
+          "domain:lmru.tech",
+          "domain:dodostatic.net",
+          "domain:flocktory.com",
+          "domain:weborama.fr",
+          "domain:yandex.com",
+          "domain:vk-portal.net",
+          "domain:vk.com",
+          "domain:github.com",
+          "domain:githubusercontent.com",
+          "domain:yclients.com",
+          "domain:icloud.com",
+          "geosite:category-ru"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "1.1.1.1",
+          "130.193.58.0/24",
+          "213.248.110.0/24",
+          "213.59.253.0/24",
+          "155.212.204.0/24"
+        ],
+        "type": "field",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp",
+        "balancerTag": "Balancer"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "Balancer",
+        "selector": [
+          "Auto1",
+          "Proxy2"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "maxRTT": "4s",
+            "expected": 1,
+            "baselines": [
+              "4s"
+            ],
+            "tolerance": 0.2
+          }
+        },
+        "fallbackTag": "proxyfall"
+      }
+    ],
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "Auto1",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "uk1.nnmm.me",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "uk1.nnmm.me",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "Proxy2",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "46.8.209.223",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "zz.tgnn.live",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "proxyfall",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "nl2.nnmm.me",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "nl2.nnmm.me",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "burstObservatory": {
+    "pingConfig": {
+      "timeout": "5s",
+      "interval": "15s",
+      "sampling": 4,
+      "destination": "http://www.gstatic.com/generate_204",
+      "connectivity": ""
+    },
+    "subjectSelector": [
+      "Auto1",
+      "Proxy2"
+    ]
+  },
+  "remarks": "🇬🇧 Лондон / 🇪🇺 Обход"
+}
