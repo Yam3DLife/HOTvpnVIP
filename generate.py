@@ -129,25 +129,42 @@ def build_subscription(keys, expire_timestamp, total_bytes, display_name, descri
     return base64.b64encode(combined.encode()).decode()
 
 def build_json_subscription(json_config, expire_timestamp, total_bytes, display_name, description):
-    """Добавляет метаданные в JSON-конфиг и возвращает его в виде строки"""
-    # Создаём копию, чтобы не изменять оригинал
-    config_copy = json_config.copy()
+    """
+    Создаёт JSON-подписку в формате, понятном Happ.
+    Если json_config — массив, оставляет как есть.
+    Если json_config — объект с outbounds, преобразует в массив.
+    """
+    # Определяем тип JSON
+    if isinstance(json_config, list):
+        # Уже массив серверов — оставляем
+        servers = json_config
+    elif isinstance(json_config, dict):
+        # Объект — пытаемся извлечь массив из outbounds
+        if "outbounds" in json_config and isinstance(json_config["outbounds"], list):
+            servers = json_config["outbounds"]
+        else:
+            servers = [json_config]
+    else:
+        servers = []
     
-    # Добавляем метаданные в JSON
-    config_copy["subscription-userinfo"] = {
-        "upload": 0,
-        "download": 0,
-        "total": total_bytes,
-        "expire": expire_timestamp
-    }
-    # Добавляем название профиля и описание
-    config_copy["profile-title"] = f"HotVPN {display_name}"
-    config_copy["profile-update-interval"] = 5
-    config_copy["support-url"] = "https://t.me/Wd_Life"
-    config_copy["sub-expire"] = True
-    config_copy["announce"] = description
+    # Добавляем метаданные в JSON (только для отображения в Happ)
+    user_info = f"upload=0; download=0; total={total_bytes}; expire={expire_timestamp}"
     
-    return json.dumps(config_copy, indent=2, ensure_ascii=False)
+    # Формируем текстовые заголовки (Happ читает их из любого файла)
+    headers = f"""#profile-title: HotVPN {display_name}
+#profile-update-interval: 5
+#support-url: https://t.me/Wd_Life
+#subscription-userinfo: {user_info}
+#sub-expire: true
+#announce: {description}
+
+"""
+    # Собираем финальную подписку: заголовки + JSON (без кодирования в base64)
+    json_part = json.dumps(servers, indent=2, ensure_ascii=False)
+    combined = headers + json_part
+    
+    # Happ понимает как base64, так и plain text, но для совместимости кодируем
+    return base64.b64encode(combined.encode()).decode()
 
 def main():
     os.makedirs('subs', exist_ok=True)
