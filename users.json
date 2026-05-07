@@ -124,5 +124,11 @@
     "plan": "RED_SUMMER",
     "expire_date": "2026-06-06",
     "traffic_limit_gb": 0
+  },
+  "TESTjson": {
+    "status": "active",
+    "plan": "RED_SUMMER",
+    "expire_date": "2026-06-06",
+    "traffic_limit_gb": 0
   }
 }
