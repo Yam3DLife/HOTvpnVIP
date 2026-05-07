@@ -1,0 +1,68 @@
+[
+  {
+    "remarks": "🇩🇪 Германия",
+    "protocol": "trojan",
+    "settings": {
+      "servers": [
+        {
+          "address": "de5.nnmm.me",
+          "port": 443,
+          "password": "UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp"
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "tls",
+      "tlsSettings": {
+        "serverName": "de5.nnmm.me",
+        "fingerprint": "qq",
+        "alpn": ["h2", "http/1.1"]
+      }
+    }
+  },
+  {
+    "remarks": "🇳🇱 Нидерланды",
+    "protocol": "trojan",
+    "settings": {
+      "servers": [
+        {
+          "address": "nl2.nnmm.me",
+          "port": 443,
+          "password": "UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp"
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "tls",
+      "tlsSettings": {
+        "serverName": "nl2.nnmm.me",
+        "fingerprint": "chrome",
+        "alpn": ["h2", "http/1.1"]
+      }
+    }
+  },
+  {
+    "remarks": "🇪🇪 Эстония",
+    "protocol": "trojan",
+    "settings": {
+      "servers": [
+        {
+          "address": "ee1.nnmm.me",
+          "port": 443,
+          "password": "UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp"
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "tls",
+      "tlsSettings": {
+        "serverName": "ee1.nnmm.me",
+        "fingerprint": "qq",
+        "alpn": ["h2", "http/1.1"]
+      }
+    }
+  }
+]
