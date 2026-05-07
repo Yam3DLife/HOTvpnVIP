@@ -12,7 +12,8 @@ TARIFFS = {
         "description": "Пробный доступ на 3 дней, 5 ГБ трафика, скорость до 50 Мбит/с",
         "default_days": 3,
         "default_traffic_gb": 5,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "lite": {
         "keys_file": "keys/lite.txt",
@@ -20,7 +21,8 @@ TARIFFS = {
         "description": "Самый доступный и недорогой 30 ГБ/мес",
         "default_days": 30,
         "default_traffic_gb": 30,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "vip": {
         "keys_file": "keys/vip.txt",
@@ -28,7 +30,8 @@ TARIFFS = {
         "description": "Надёжный и продвинутый 50 ГБ/мес",
         "default_days": 30,
         "default_traffic_gb": 50,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "ultra": {
         "keys_file": "keys/vip.txt",
@@ -36,7 +39,8 @@ TARIFFS = {
         "description": "Полный безлимит на месяц",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "family": {
         "keys_file": "keys/vip.txt",
@@ -44,7 +48,8 @@ TARIFFS = {
         "description": "На всю семью. Недорого. И всегда с интернетом",
         "default_days": 30,
         "default_traffic_gb": 200,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "premium": {
         "keys_file": "keys/vip.txt",
@@ -52,7 +57,8 @@ TARIFFS = {
         "description": "Премиум доступ на 60 дней, безлимитный трафик",
         "default_days": 60,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "RED": {
         "keys_file": "keys/vip.txt",
@@ -60,7 +66,8 @@ TARIFFS = {
         "description": "Сезонный тариф. Недорого. Полный безлимит на месяц",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "Green": {
         "keys_file": "keys/vip.txt",
@@ -68,7 +75,8 @@ TARIFFS = {
         "description": "Будь всегда на связи и по выгодной цене. Полный безлимит месяц",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
     "Super": {
         "keys_file": "keys/vip.txt",
@@ -76,25 +84,26 @@ TARIFFS = {
         "description": "Будь всегда на связи. Полный безлимит месяц",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": False,
+        "raw_copy": False
     },
-    # ===== JSON-ТАРИФ (устарел, не использовать) =====
     "json_RED": {
         "keys_file": "keys/red_summer.txt",
         "display_name": "REDsUmmer 🔴",
         "description": "Летний безлимит, полный безлимит трафика, серверы: Лондон + Обход, скорость до 1 Гбит/с",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": True,
+        "raw_copy": False
     },
-    # ===== НОВЫЙ ТАРИФ RED SUMMER (TXT с JSON внутри) =====
     "RED_SUMMER": {
         "keys_file": "keys/red_summer.txt",
         "display_name": "REDsUmmer 🔴",
         "description": "Летний безлимит, 3 сервера",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": True   # ← ДОЛЖНО БЫТЬ True
+        "is_json": False,
+        "raw_copy": True   # ← РЕЖИМ КОПИРОВАНИЯ КАК ЕСТЬ
     }
 }
 # ============================================================
@@ -213,6 +222,7 @@ def main():
         display_name = tariff_config["display_name"]
         description = tariff_config.get("description", "")
         is_json = tariff_config.get("is_json", False)
+        raw_copy = tariff_config.get("raw_copy", False)
         
         # ===== ЛОГИКА ДАТЫ =====
         expire_date_str = user_info.get('expire_date')
@@ -240,7 +250,16 @@ def main():
         
         # ===== ОБРАБОТКА JSON ИЛИ ОБЫЧНОЙ ПОДПИСКИ =====
         try:
-            if is_json:
+            if raw_copy:
+                # Режим прямого копирования (без изменений, без base64)
+                with open(tariff_config["keys_file"], 'r', encoding='utf-8') as src:
+                    content = src.read()
+                output_path = f'subs/{user_id}.txt'
+                with open(output_path, 'w', encoding='utf-8') as dst:
+                    dst.write(content)
+                print(f"✅ {user_id}: {display_name} (RAW COPY) создан, истекает: {expire_date_str}, лимит: {traffic_limit_gb} GB")
+                print(f"   Файл: {output_path}")
+            elif is_json:
                 # JSON-подписка
                 json_config = load_json_config(tariff)
                 subscription = build_json_subscription(json_config, expire_timestamp, total_bytes, display_name, description)
