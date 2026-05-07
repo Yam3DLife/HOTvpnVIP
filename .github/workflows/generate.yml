@@ -36,32 +36,31 @@ jobs:
       
       - name: List files before generation
         run: |
-          echo "=== Содержимое configs до генерации ==="
-          ls -la configs/ || echo "configs пуста или не существует"
-          echo "=== Содержимое keys до генерации ==="
-          ls -la keys/ || echo "keys пуста или не существует"
-          echo "=== Содержимое subs до генерации ==="
-          ls -la subs/ || echo "subs пуста или не существует"
+          echo "=== Проверяем configs ==="
+          ls -la configs/ || echo "configs не существует или пуста"
+          echo "=== Проверяем keys ==="
+          ls -la keys/ || echo "keys не существует или пуста"
       
       - name: Run generation script
         run: python generate.py
       
       - name: List files after generation
         run: |
-          echo "=== Содержимое subs после генерации ==="
-          ls -la subs/ || echo "subs пуста или не существует"
+          echo "=== Файлы в subs после генерации ==="
+          ls -la subs/ || echo "subs не существует или пуста"
       
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Добавляем все изменения (и .txt, и .json, и users.json)
-          git add subs/*.txt 2>/dev/null || true
-          git add subs/*.json 2>/dev/null || true
-          git add users.json 2>/dev/null || true
+          # Добавляем ВСЕ файлы в subs (и .txt, и .json, и любые другие)
+          git add subs/ || true
           
-          # Проверяем, есть ли изменения для коммита
+          # Добавляем users.json (если изменился)
+          git add users.json || true
+          
+          # Проверяем, есть ли изменения
           if git diff --cached --quiet; then
             echo "Нет изменений для коммита"
             exit 0
@@ -70,5 +69,5 @@ jobs:
           # Коммитим
           git commit -m "Auto-update subscriptions [skip ci]"
           
-          # Пытаемся запушить сначала обычным пушем, при ошибке используем force
+          # Пытаемся запушить
           git push origin main || git push origin main --force
