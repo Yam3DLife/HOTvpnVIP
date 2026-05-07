@@ -91,10 +91,10 @@ TARIFFS = {
     "RED_SUMMER": {
         "keys_file": "keys/red_summer.txt",
         "display_name": "REDsUmmer 🔴",
-        "description": "Летний безлимит, 3 сервера, скорость до 1 Гбит/с",
+        "description": "Летний безлимит, 3 сервера",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": False
+        "is_json": True   # ← ДОЛЖНО БЫТЬ True
     }
 }
 # ============================================================
