@@ -1,0 +1,71 @@
+{
+  "remarks": "REDsUmmer 🔴",
+  "outbounds": [
+    {
+      "remarks": "🇬🇧 Лондон",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "uk1.nnmm.me",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "uk1.nnmm.me",
+          "fingerprint": "qq",
+          "alpn": ["h2", "http/1.1"]
+        }
+      }
+    },
+    {
+      "remarks": "🇪🇺 Обход",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "46.8.209.223",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "zz.tgnn.live",
+          "fingerprint": "qq",
+          "alpn": ["h2", "http/1.1"]
+        }
+      }
+    },
+    {
+      "remarks": "🇳🇱 Нидерланды",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "nl2.nnmm.me",
+            "port": 443,
+            "password": "DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "nl2.nnmm.me",
+          "fingerprint": "chrome",
+          "alpn": ["h2", "http/1.1"]
+        }
+      }
+    }
+  ]
+}
