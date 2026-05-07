@@ -95,37 +95,13 @@
     "expire_date": "2028-05-19",
     "traffic_limit_gb": 0
   },
-  "FirstJson": {
-    "status": "active",
-    "plan": "json_RED",
-    "expire_date": "2026-06-06",
-    "traffic_limit_gb": 0
-  },
-  "JSON_NEW": {
-    "status": "active",
-    "plan": "json_RED",
-    "expire_date": "2026-06-06",
-    "traffic_limit_gb": 0
-  },
-  "test_json_user": {
-  "status": "active",
-  "plan": "json_test",
-  "expire_date": "2026-06-06",
-  "traffic_limit_gb": 0
-  },
-  "USERtestFirst": {
-    "status": "active",
-    "plan": "RED_SUMMER",
-    "expire_date": "2026-06-06",
-    "traffic_limit_gb": 0
-  },
-  "USERtestTWO": {
-    "status": "active",
-    "plan": "RED_SUMMER",
-    "expire_date": "2026-06-06",
-    "traffic_limit_gb": 0
-  },
   "TESTjson": {
+    "status": "active",
+    "plan": "RED_SUMMER",
+    "expire_date": "2026-06-06",
+    "traffic_limit_gb": 0
+  },
+  "UStestt": {
     "status": "active",
     "plan": "RED_SUMMER",
     "expire_date": "2026-06-06",
