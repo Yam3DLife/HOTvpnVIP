@@ -34,16 +34,32 @@ jobs:
         run: |
           mkdir -p configs keys subs
       
+      - name: List files before generation
+        run: |
+          echo "=== Содержимое configs до генерации ==="
+          ls -la configs/ || echo "configs пуста или не существует"
+          echo "=== Содержимое keys до генерации ==="
+          ls -la keys/ || echo "keys пуста или не существует"
+          echo "=== Содержимое subs до генерации ==="
+          ls -la subs/ || echo "subs пуста или не существует"
+      
       - name: Run generation script
         run: python generate.py
+      
+      - name: List files after generation
+        run: |
+          echo "=== Содержимое subs после генерации ==="
+          ls -la subs/ || echo "subs пуста или не существует"
       
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Добавляем все изменения
-          git add -A
+          # Добавляем все изменения (и .txt, и .json, и users.json)
+          git add subs/*.txt 2>/dev/null || true
+          git add subs/*.json 2>/dev/null || true
+          git add users.json 2>/dev/null || true
           
           # Проверяем, есть ли изменения для коммита
           if git diff --cached --quiet; then
@@ -54,5 +70,5 @@ jobs:
           # Коммитим
           git commit -m "Auto-update subscriptions [skip ci]"
           
-          # Пушим с force (разрешаем конфликт в пользу наших изменений)
-          git push origin main --force
+          # Пытаемся запушить сначала обычным пушем, при ошибке используем force
+          git push origin main || git push origin main --force
