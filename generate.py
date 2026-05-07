@@ -78,13 +78,23 @@ TARIFFS = {
         "default_traffic_gb": 0,
         "is_json": False
     },
+    # ===== JSON-ТАРИФ (устарел, не использовать) =====
     "json_RED": {
-        "keys_file": "configs/advanced.json",
+        "keys_file": "keys/red_summer.txt",
         "display_name": "REDsUmmer 🔴",
         "description": "Летний безлимит, полный безлимит трафика, серверы: Лондон + Обход, скорость до 1 Гбит/с",
         "default_days": 30,
         "default_traffic_gb": 0,
-        "is_json": True
+        "is_json": False
+    },
+    # ===== НОВЫЙ ТАРИФ RED SUMMER (TXT с JSON внутри) =====
+    "RED_SUMMER": {
+        "keys_file": "keys/red_summer.txt",
+        "display_name": "REDsUmmer 🔴",
+        "description": "Летний безлимит, 3 сервера, скорость до 1 Гбит/с",
+        "default_days": 30,
+        "default_traffic_gb": 0,
+        "is_json": False
     }
 }
 # ============================================================
