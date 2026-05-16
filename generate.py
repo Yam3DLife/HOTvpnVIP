@@ -103,7 +103,7 @@ TARIFFS = {
         "default_days": 30,
         "default_traffic_gb": 0,
         "is_json": False,
-        "raw_copy": True
+        "raw_copy": False
     }
 }
 # ============================================================
