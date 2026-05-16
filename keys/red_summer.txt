@@ -1,3 +1,5 @@
-trojan://UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp@de5.nnmm.me:443?security=tls&sni=de5.nnmm.me&fp=qq&alpn=h2,http/1.1#🇩🇪 Германия
-trojan://UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp@nl2.nnmm.me:443?security=tls&sni=nl2.nnmm.me&fp=chrome&alpn=h2,http/1.1#🇳🇱 Нидерланды
-trojan://UQWspaWj93McxEVVyx9Q7dmAAazUn0Vp@ee1.nnmm.me:443?security=tls&sni=ee1.nnmm.me&fp=qq&alpn=h2,http/1.1#🇪🇪 Эстония
+trojan://DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat@46.8.209.223:443?security=tls&sni=zz.tgnn.live&fp=qq&alpn=h2,http/1.1#🇪🇺 Обход
+trojan://DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat@de5.nnmm.me:443?security=tls&sni=de5.nnmm.me&fp=firefox&alpn=h2,http/1.1#🇩🇪 Германия
+trojan://DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat@nl2.nnmm.me:443?security=tls&sni=nl2.nnmm.me&fp=chrome&alpn=h2,http/1.1#🇳🇱 Нидерланды
+trojan://DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat@ee1.nnmm.me:443?security=tls&sni=ee1.nnmm.me&fp=qq&alpn=h2,http/1.1#🇪🇪 Эстония
+trojan://DLUCMMKxAHz-8Xg7LLnkR-yFRc_NUFat@de5.nnmm.me:443?security=tls&sni=de5.nnmm.me&fp=firefox&alpn=h2,http/1.1#🇪🇺 Автовыбор локации
